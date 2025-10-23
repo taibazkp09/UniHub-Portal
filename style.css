@@ -1,0 +1,153 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  background: rgba(6, 56, 157, 0.95);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.8s ease;
+  height: 50px;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+#heading {
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+  padding-top: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.form-box {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.8s ease;
+}
+
+h2 {
+  text-align: center;
+  color: #06389d;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #06389d;
+  box-shadow: 0 0 8px rgba(6, 56, 157, 0.3);
+}
+
+.ee-icon {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #06389d;
+}
+
+#btn {
+  background: #06389d;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#btn:hover {
+  background: #052b7b;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  margin: 20px 0;
+  color: #fff;
+  font-size: 14px;
+  animation: fadeIn 1.2s ease;
+}
+
+.footer i {
+  color: #ff4d4d;
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(-50px); opacity: 0;}
+  100% {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes popUp {
+  0% {transform: scale(0.8); opacity: 0;}
+  100% {transform: scale(1); opacity: 1;}
+}
+
+/* ✅ Responsive */
+@media (max-width: 480px) {
+  #heading {
+    font-size: 16px;
+  }
+  .form-box {
+    margin: 10px;
+    padding: 25px 20px;
+  }
+}
